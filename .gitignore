@@ -1,0 +1,13 @@
+node_modules
+.env
+# .gitpush.sh
+# ./routes
+# ./payments
+# ./models
+# ./controller
+# ./jwt_helpers.js
+# ./init_redis.js
+# ./cloudinaryImageHandler.js
+# ./nodemailerObject.js
+# ./rate-limit.js
+# ./validation_schema.js
