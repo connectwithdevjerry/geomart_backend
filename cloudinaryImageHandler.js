@@ -1,29 +1,29 @@
-// const cloudinary = require("cloudinary").v2;
-// require("dotenv").config();
+const cloudinary = require("cloudinary").v2;
+require("dotenv").config();
 
-// cloudinary.config({
-//   cloud_name: process.env.CLOUD_NAME,
-//   api_key: process.env.CLOUD_API_KEY,
-//   api_secret: process.env.CLOUD_API_SECRET,
-// });
+cloudinary.config({
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.CLOUD_API_KEY,
+  api_secret: process.env.CLOUD_API_SECRET,
+});
 
-// const saveImageToDB = async (media) => {
-//   var result;
-//   await cloudinary.uploader
-//     .upload(media, {
-//       timeout: 60000,
-//       resource_type: "image",
-//       folder: "productImages",
-//       overwrite: true,
-//     })
-//     .then((res) => {
-//       console.log({ res });
-//       result = { ...res };
-//     })
-//     .catch((err) => console.log({ err }));
-//   return result;
-// };
+const saveImageToDB = async (media) => {
+  var result;
+  await cloudinary.uploader
+    .upload(media, {
+      timeout: 60000,
+      resource_type: "image",
+      folder: "productImages",
+      overwrite: true,
+    })
+    .then((res) => {
+      console.log({ res });
+      result = { ...res };
+    })
+    .catch((err) => console.log({ err }));
+  return result;
+};
 
-// module.exports = {
-//   saveImageToDB,
-// };
+module.exports = {
+  saveImageToDB,
+};
